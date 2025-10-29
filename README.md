@@ -30,3 +30,11 @@ YubiKey 5C NFC is setup with signing keys to use for SSH and Git signing
 ```bash
 ./yubikey.sh
 ```
+
+## Fonts
+
+Install fonts e.g. Gintronic for coding
+
+```bash
+./fonts.sh
+```
