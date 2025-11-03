@@ -11,30 +11,8 @@ cd macOS && ./install.sh
 
 ## Installation Script
 
-The install script takes care of installing:
-
-* xcode clt
-* [homebrew](https://brew.sh)
-* git
-* [stow](https://www.gnu.org/software/stow/)
-* [dotfiles](https://github.com/crosby/dotfiles)
+The install script takes care of everything:
 
 ```bash
 ./install.sh
-```
-
-## YubiKey Setup
-
-YubiKey 5C NFC is setup with signing keys to use for SSH and Git signing
-
-```bash
-./yubikey.sh
-```
-
-## Fonts
-
-Install fonts e.g. Gintronic for coding
-
-```bash
-./fonts.sh
 ```

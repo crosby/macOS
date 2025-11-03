@@ -18,3 +18,27 @@ brew install git stow
 if [ ! -d "$HOME/.dotfiles" ]; then
   git clone git@github.com:crosby/dotfiles.git "$HOME/.dotfiles"
 fi
+
+# Install brew packages
+if [ ! -f "$HOME/Brewfile" ]; then
+    stow -d ~/.dotfiles brew
+    brew bundle --file "$HOME/Brewfile"
+fi
+
+# Setup Zsh
+stow -d ~/.dotfiles --override=.zshrc zsh
+
+# Stow git
+stow -d ~/.dotfiles git
+
+# Remove "Last Login"
+touch ~/.hushlogin
+
+# Install Yubikey
+./yubikey.sh
+
+# Install development tools
+./development.sh
+
+# Install fonts
+./fonts.sh
