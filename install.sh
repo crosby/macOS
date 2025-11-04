@@ -41,6 +41,3 @@ touch ~/secrets.zsh
 
 # Install development tools
 ./development.sh
-
-# Install fonts
-./fonts.sh
