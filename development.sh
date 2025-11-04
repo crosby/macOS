@@ -12,3 +12,6 @@ stow -d ~/.dotfiles zed
 
 # Decrypt zed config
 sops --decrypt --input-type json --output-type json ~/.config/zed/settings.json.enc > ~/.config/zed/settings.json
+
+# Setup codex
+codex login

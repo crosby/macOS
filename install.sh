@@ -25,14 +25,16 @@ if [ ! -f "$HOME/Brewfile" ]; then
     brew bundle --file "$HOME/Brewfile"
 fi
 
-# Setup Zsh
+# Stow
 stow -d ~/.dotfiles --override=.zshrc zsh
-
-# Stow git
 stow -d ~/.dotfiles git
+stow -d ~/.dotfiles gnupg
 
 # Remove "Last Login"
 touch ~/.hushlogin
+
+# Make a file for secrets
+touch ~/secrets.zsh
 
 # Install Yubikey
 ./yubikey.sh
